@@ -1,0 +1,11 @@
+.customButton {
+  padding:10px 25px;
+  background-color: aqua;
+  color: white;
+  border: 1px solid red;
+  font-family: cursive;
+  font-size: medium;
+  font-weight: 700;
+  margin:10px
+
+}
