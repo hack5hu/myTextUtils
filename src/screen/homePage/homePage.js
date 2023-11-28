@@ -5,6 +5,7 @@ function HomePage(props) {
     console.log(event.target.value);
     setText(event.target.value);
   };
+  
   return (
     <div className="App">
       <textarea
@@ -17,8 +18,10 @@ function HomePage(props) {
           console.log(event);
         }}
         placeholder="Start entering....."
+        className=""
       />
-      <button>Click me </button>
+      <button >For Capital </button>
+      <button> For Small</button>
       <h1> Preview</h1>
       <p>{text}</p>
     </div>
