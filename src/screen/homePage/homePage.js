@@ -1,11 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 function HomePage(props) {
   const [text, setText] = useState("");
+  const [isCap, setIsCap] = useState(false);
   const handleOnChange = (event) => {
-    console.log(event.target.value);
     setText(event.target.value);
   };
-  
+  useEffect(() => {
+      console.log(isCap);
+      console.log(text);
+  }, [text, isCap]);
+
+  function truefalse() {
+    // if (isCap == true) {
+    //   setIsCap(false);
+    //   console.log(isCap);
+    // } else {
+    //   setIsCap( true);
+    //   console.log(isCap);
+    // }
+    // console.log("line 26",isCap)
+    setIsCap(!isCap)
+  }
+  // console.log("line 31", isCap);
   return (
     <div className="App">
       <textarea
@@ -15,15 +31,16 @@ function HomePage(props) {
         value={text}
         onChange={(event) => {
           handleOnChange(event);
-          console.log(event);
         }}
         placeholder="Start entering....."
         className=""
       />
-      <button >For Capital </button>
+      <button onClick={truefalse}>For Capital </button>
       <button> For Small</button>
       <h1> Preview</h1>
+
       <p>{text}</p>
+      {/* <button onClick={()=>chng()}>Chnage the value I</button> */}
     </div>
   );
 }
