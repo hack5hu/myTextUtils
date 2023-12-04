@@ -9,8 +9,13 @@ function HomePage(props) {
       console.log(isCap);
       console.log(text);
   }, [text, isCap]);
+  /**
+   * this function is use for changing the value of isCap
+   * @param bool is boolean
+   * @param 
+   */
 
-  function truefalse() {
+ function truefalse() {
     // if (isCap == true) {
     //   setIsCap(false);
     //   console.log(isCap);
